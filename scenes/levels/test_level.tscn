@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://bwx2bwg40ahxa"]
+
+[ext_resource type="PackedScene" uid="uid://c0cspfu2xnil5" path="res://scenes/player/sonic.tscn" id="1_jbqir"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yautc"]
+size = Vector2(84, 20)
+
+[node name="TestLevel" type="Node2D"]
+
+[node name="Sonic" parent="." instance=ExtResource("1_jbqir")]
+
+[node name="suelo" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="suelo"]
+position = Vector2(20, 36)
+shape = SubResource("RectangleShape2D_yautc")
